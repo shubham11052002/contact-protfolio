@@ -33,7 +33,7 @@ form.addEventListener("submit", async (e) => {
     message: form.message.value
   };
 
-  const res = await fetch("https://contact-form-1-nbgy.onrender.com/send-emaill", {
+  const res = await fetch("https://contact-form-1-nbgy.onrender.com/send-email", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
