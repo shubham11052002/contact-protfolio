@@ -8,6 +8,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const resend = new Resend("re_F66P4oaZ_JmEmdfehDwgCixiSHabTM1cQ");
+app.get("/", (req, res) => {
+    res.send("✅ Backend is running on Render!");
+  });
+  
 
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
