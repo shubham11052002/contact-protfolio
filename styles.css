@@ -89,15 +89,15 @@ body {
 .text {
   display: flex;
   position: absolute;
-  opacity: 0; /* Start hidden */
-  transform: translateY(20px); /* Start below */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Fade and slide effect */
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .text.active {
   display: flex;
-  opacity: 1; /* Show when active */
-  transform: translateY(0); /* Move to original position */
+  opacity: 1;
+  transform: translateY(0); 
 }
 .intro {
   flex: 2;
@@ -136,7 +136,6 @@ body {
   margin-right: 0.5rem;
 }
 
-/* About Section */
 .about-section {
   display: flex;
   justify-content: space-between;
@@ -172,48 +171,96 @@ body {
 
 /* Buttons in About Section */
 .btn-section {
-  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
-  background-color: #333;
-  color: white;
-  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
-  margin-right: 1rem;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: white;
+  white-space: nowrap;
 }
 
-.btn:hover {
-  background-color: #555;
+.view-btn {
+  background-color: #00bcd4;
+}
+.view-btn:hover {
+  background-color: #0097a7;
+  transform: translateY(-2px);
+}
+
+.download-btn {
+  background-color: #4caf50;
+}
+.download-btn:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
+}
+
+.projects-btn {
+  background-color: #ff9800;
+}
+.projects-btn:hover {
+  background-color: #f57c00;
+  transform: translateY(-2px);
 }
 
 .btn i {
   margin-right: 0.5rem;
 }
 
+
 /* Skills Section */
 #skills {
-  padding: 2rem;
+  padding: 2.5rem 1rem;
   background-color: #f9f9f9;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-
-.skill {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
+#skills h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.single-skill-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1.2rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.skill-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #444;
+  flex: 1;
+  text-align: left;
+}
+
 .progress-bar {
+  flex: 2;
   background-color: #ddd;
-  border-radius: 5px;
-  height: 20px;
+  border-radius: 50px;
+  height: 22px;
+  margin-left: 20px;
   overflow: hidden;
   position: relative;
 }
@@ -221,14 +268,17 @@ body {
 .progress {
   background-color: #4caf50;
   height: 100%;
-  border-radius: 5px;
-  width: 0;
-  color: white;
+  border-radius: 50px;
+  width: 0%;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: width 2s ease;
+  transition: width 1s ease;
 }
+
 
 /* Contact Section */
 #contact {
@@ -284,4 +334,45 @@ footer {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.cursor {
+  color: #FFA500	;
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+#typed-name {
+  font-family: 'Raleway', sans-serif;
+  color: #FFA500	; 
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #20ba5b;
 }

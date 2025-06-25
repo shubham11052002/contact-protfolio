@@ -1,157 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Projects</title>
-  <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    /* Navbar */
-    nav {
-      background-color: #333;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    /* Section Styles */
-    section {
-      padding: 2rem;
-      margin: 1rem auto;
-      max-width: 1200px;
-      background-color: rgb(220, 215, 215);
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #444;
-      font-size: 2rem;
-    }
-
-    /* Project Lists */
-    .project-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .project {
-      position: relative;
-      background: linear-gradient(145deg, #e6e6e6, #ffffff);
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 5px 5px 10px #9f9a9a,
-                  -5px -5px 10px #ffffff;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .project h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.5rem;
-      color: #333;
-    }
-
-    .project p {
-      margin-bottom: 1rem;
-    }
-
-    .project a {
-      display: inline-block;
-      text-decoration: none;
-      color: #fff;
-      background-color: #333;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .project a:hover {
-      background-color: #555;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      section {
-        padding: 1rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="project.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav>
-    <h1>My Projects</h1>
+    <h1><i class="fas fa-laptop-code"></i> Shubham's Project Portfolio</h1>
   </nav>
 
-  <!-- Minor Projects Section -->
+  <!-- Minor Projects -->
   <section>
-    <h2>Minor Projects</h2>
+    <h2>💡 Minor Projects</h2>
     <div class="project-list">
       <div class="project">
-        <h3>Project 1: Simple Calculator</h3>
+        <h3>🧮 Simple Calculator</h3>
         <p>A basic calculator built using HTML, CSS, and JavaScript. It performs simple arithmetic operations.</p>
         <a href="https://yourlinktoProject1.com" target="_blank">View Project</a>
       </div>
       <div class="project">
-        <h3>Project 2: To-Do List</h3>
-        <p>A simple to-do list application that allows users to add, edit, and delete tasks.</p>
+        <h3>📝 To-Do List</h3>
+        <p>A to-do list application with task creation, editing, and deletion functionalities using vanilla JS.</p>
         <a href="https://yourlinktoProject2.com" target="_blank">View Project</a>
       </div>
       <div class="project">
-        <h3>Project 3: Weather App</h3>
-        <p>A weather application that fetches data from an API to display current weather information based on user input.</p>
+        <h3>☁️ Weather App</h3>
+        <p>Fetches real-time weather data from an API and displays it based on user input city name.</p>
         <a href="https://yourlinktoProject3.com" target="_blank">View Project</a>
       </div>
     </div>
   </section>
 
-  <!-- Major Projects Section -->
+  <!-- Major Projects -->
   <section>
-    <h2>Major Projects</h2>
+    <h2>🚀 Major Projects</h2>
     <div class="project-list">
       <div class="project">
-        <h3>Project 4: E-Commerce Website</h3>
-        <p>A full-fledged e-commerce website built using React, Node.js, and MongoDB. Users can browse products, add to cart, and make purchases.</p>
-        <a href="https://yourlinktoProject4.com" target="_blank">View Project</a>
+        <h3>📰 Blog-Post Application (Penora)</h3>
+        <p><strong>Timeline:</strong> Jan 2025 | <strong>Role:</strong> Full Stack Developer</p>
+        <p><strong>Tech Stack:</strong> React.js, Node.js, MongoDB, Tailwind CSS, JWT, Cloudinary</p>
+        <ul>
+          <li>Developed a full-stack blog app with JWT authentication and full CRUD operations.</li>
+          <li>Integrated Cloudinary for optimized blog image hosting and fast loading.</li>
+          <li>Designed a mobile-first responsive UI using Tailwind CSS.</li>
+        </ul>
+        <a href="https://your-penora-link.com" target="_blank">View Project</a>
       </div>
+
       <div class="project">
-        <h3>Project 5: Portfolio Website</h3>
-        <p>A personal portfolio website showcasing projects and skills. Built with HTML, CSS, and JavaScript.</p>
-        <a href="https://yourlinktoProject5.com" target="_blank">View Project</a>
+        <h3>📚 Book Management App (BookVault)</h3>
+        <p><strong>Timeline:</strong> Dec 2024 | <strong>Role:</strong> Full Stack Developer</p>
+        <p><strong>Tech Stack:</strong> React.js, Node.js, MongoDB, Tailwind CSS, JWT, Stripe</p>
+        <ul>
+          <li>Built an inventory system for books with real-time cart and secure payment simulation.</li>
+          <li>Managed over 100+ books with dynamic admin control.</li>
+          <li>Enhanced user experience with optimized search and checkout flow.</li>
+        </ul>
+        <a href="https://your-bookvault-link.com" target="_blank">View Project</a>
       </div>
+
       <div class="project">
-        <h3>Project 6: Blogging Platform</h3>
-        <p>A blogging platform where users can create, edit, and delete posts. Built using Django and PostgreSQL.</p>
-        <a href="https://yourlinktoProject6.com" target="_blank">View Project</a>
+        <h3>💬 Real-Time Chat App (EchoChat)</h3>
+        <p><strong>Timeline:</strong> ...(In Progress) | <strong>Role:</strong> Full Stack Developer</p>
+        <p><strong>Tech Stack:</strong> React.js, Node.js, Express, Socket.io, MongoDB</p>
+        <ul>
+          <li>Live chat functionality with real-time message delivery via WebSocket (under 100ms latency).</li>
+          <li>Active user tracking and live updates using Socket.io.</li>
+          <li>Scalable design to support 50+ users concurrently.</li>
+        </ul>
+        <a href="https://your-echochat-link.com" target="_blank">View Project</a>
       </div>
     </div>
   </section>
