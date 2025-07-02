@@ -1,23 +1,18 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const path = require("path");
 const { Resend } = require("resend");
-
 const PORT = process.env.PORT || 8080;
-const app = express();
 
+const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Serve frontend
-app.use(express.static(path.join(__dirname, "public")));
-
+const resend = new Resend("re_F66P4oaZ_JmEmdfehDwgCixiSHabTM1cQ");
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/index.html"));
-});
-
-const resend = new Resend("YOUR_RESEND_API_KEY"); // <-- Keep this in env var in Render
+    res.send("✅ Backend is running on Render!");
+  });
+  
 
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
