@@ -10,7 +10,11 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: "https://contact-protfolio.onrender.com", // frontend URL
+  methods: ["POST", "GET"],
+  credentials: false
+}));  
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "public")));

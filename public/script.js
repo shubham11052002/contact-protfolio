@@ -22,6 +22,7 @@ const responseEl = document.getElementById("responseMsg");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
   const formData = {
     name: form.name.value.trim(),
     email: form.email.value.trim(),
@@ -29,7 +30,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const res = await fetch("https://contact-form-1-nbgy.onrender.com/send-email", {
+    const res = await fetch("/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
