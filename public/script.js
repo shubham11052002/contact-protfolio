@@ -65,33 +65,12 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
-const skills = [
-  { name: "HTML/CSS", percent: 95 },
-  { name: "JavaScript", percent: 83 },
-  { name: "React.js", percent: 90 },
-  { name: "Node.js", percent: 90 },
-  { name: "Express.js", percent: 80 },
-  { name: "MongoDB", percent: 85 },
-  { name: "DSA", percent: 60 }
-];
-
-let currentSkill = 0;
-const nameEl = document.getElementById("skill-name");
-const progressEl = document.getElementById("skill-progress");
-
-function updateSkill() {
-  const skill = skills[currentSkill];
-  nameEl.textContent = skill.name;
-  progressEl.style.width = "0%";
-  setTimeout(() => {
-    progressEl.textContent = skill.percent + "%";
-    progressEl.style.width = skill.percent + "%";
-  }, 100);
-  currentSkill = (currentSkill + 1) % skills.length;
-}
-
-updateSkill();
-setInterval(updateSkill, 1400);
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.fill').forEach(bar => {
+      const percent = bar.getAttribute('data-percent');
+      bar.style.width = percent;
+    });
+  });
 
 const nameText = "Shubham Sharma";
 const typedEl = document.getElementById("typed-name");

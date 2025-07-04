@@ -242,62 +242,75 @@ body {
 }
 
 #skills {
-  padding: 2.5rem 1rem;
-  background-color: #f9f9f9;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 4rem 1rem;
+  background-color: #1e1e2e;
+}
+
+.skills-container {
+  max-width: 900px;
+  margin: auto;
+  color: #fff;
   text-align: center;
 }
 
-#skills h2 {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  color: #333;
-  font-weight: 600;
+.skills-container h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  color: #00d9ff;
 }
 
-.single-skill-display {
+.skills-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 1.2rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.skill-name {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #444;
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.skill-label img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.skill-label span {
   flex: 1;
   text-align: left;
+  margin-left: 8px;
 }
 
-.progress-bar {
-  flex: 2;
-  background-color: #ddd;
-  border-radius: 50px;
-  height: 22px;
-  margin-left: 20px;
+.bar {
+  width: 100%;
+  background: #2c2c3b;
+  border-radius: 10px;
+  height: 14px;
   overflow: hidden;
-  position: relative;
 }
 
-.progress {
-  background-color: #4caf50;
+.fill {
   height: 100%;
-  border-radius: 50px;
   width: 0%;
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: width 1s ease;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00d9ff, #00ffa2);
+  transition: width 1.5s ease-in-out;
 }
+
 
 #contact {
   padding: 2rem;
