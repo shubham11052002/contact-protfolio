@@ -376,3 +376,77 @@ footer {
   transform: scale(1.1);
   background-color: #20ba5b;
 }
+
+/* === Fix for small screens only === */
+@media (max-width: 768px) {
+  body {
+    margin-top: 60px;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #333;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .profile-pic {
+    width: 140px;
+    max-width: 100%;
+  }
+
+  .intro h2 {
+    font-size: 1.3rem;
+  }
+
+  #typed-name {
+    font-size: 1.5rem;
+  }
+
+  .name-container {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+
+  .btn-section {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
