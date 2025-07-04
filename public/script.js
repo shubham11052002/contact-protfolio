@@ -6,6 +6,8 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+
 const texts = document.querySelectorAll('.text');
 let index = 0;
 
@@ -16,6 +18,14 @@ function showText() {
 }
 
 setInterval(showText, 1250);
+
+const toggleBtn = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggleBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
 
 const form = document.getElementById("contactForm");
 const responseEl = document.getElementById("responseMsg");

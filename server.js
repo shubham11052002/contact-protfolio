@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 
 // Middlewares
 app.use(cors({
-  origin: "https://contact-protfolio.onrender.com", // frontend URL
+  origin: "https://contact-protfolio.onrender.com", 
   methods: ["POST", "GET"],
   credentials: false
 }));  
